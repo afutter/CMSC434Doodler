@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/settingLayout"
+    tools:context="com.example.akiva.cmsc434doodler.SettingActivity"
+    >
+
+    <!--brush size, color, and opacity as well as clear the current sketch-->
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroupBrushSize"
+        android:layout_below="@+id/brushSize"
+        android:layout_alignParentStart="true"
+        android:paddingTop="17dp">
+
+        <RadioButton
+            android:id="@+id/small"
+            android:layout_width="184dp"
+            android:layout_height="wrap_content"
+            android:text="Small"
+            android:checked="false"
+            android:textSize="25dp"/>
+
+        <RadioButton
+            android:id="@+id/medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Medium"
+            android:checked="true"
+            android:textSize="35dp"
+            android:layout_below="@+id/radioGroup"
+            android:layout_alignParentStart="true" />
+
+        <RadioButton
+            android:id="@+id/large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Large"
+            android:checked="false"
+            android:textSize="40dp"
+            android:layout_alignBottom="@+id/colorTable"
+            android:layout_alignParentStart="true" />
+
+
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Brush Size"
+        android:id="@+id/brushSize"
+        android:textSize="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Brush Color"
+        android:id="@+id/brushColor"
+        android:textSize="30dp"
+        android:layout_above="@+id/radioGroupBrushSize"
+        android:layout_alignParentEnd="true" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/brushColor"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/radioGroup2">
+        <TableLayout
+            android:id="@+id/colorTable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/brushColor"
+            android:layout_alignParentEnd="true">
+            <TableRow
+                android:id="@+id/colorTableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <Button
+                    android:id="@+id/RED"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:onClick="onClick"
+                    android:paddingRight="5dp"
+                    android:background="#fc0000" />
+
+                <Button
+                    android:id="@+id/ORANGE"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClick"
+                    android:background="#f76a05"
+                    android:layout_column="1" />
+
+                <Button
+                    android:id="@+id/YELLOW"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClick"
+                    android:layout_alignTop="@+id/colorTable"
+                    android:layout_alignParentEnd="true"
+                    android:layout_column="2"
+                    android:background="#f8e725" />
+
+            </TableRow>
+            <TableRow
+                android:id="@+id/colorTableRow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/GREEN"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClick"
+                    android:background="#36f00c" />
+
+                <Button
+                    android:id="@+id/BLUE"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClick"
+                    android:background="@drawable/blue_highlight" />
+
+                <Button
+                    android:id="@+id/VIOLET"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClick"
+                    android:background="#b107f4" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/colorTableRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/BLACK"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClick"
+                    android:background="#000000" />
+
+                <Button
+                    android:id="@+id/TEAL"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClick"
+                    android:background="#06f4d1" />
+
+                <Button
+                    android:id="@+id/WHITE"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClick"
+                    android:background="#ffffff" />
+
+            </TableRow>
+
+
+        </TableLayout>
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="APPLY CHANGES"
+        android:id="@+id/applyChanges"
+        android:textSize="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESET DFAULT"
+        android:id="@+id/resetDefault"
+        android:textSize="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/opacity"
+        android:layout_alignStart="@+id/radioGroup2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Opacity"
+        android:id="@+id/opacity"
+        android:textSize="30dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/opacitySeekBar"
+        android:max="255"
+        android:indeterminate="false"
+        android:progress="255"
+        android:layout_below="@+id/opacity"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="24dp"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>

@@ -1,0 +1,9 @@
+    private final static String RED="#fc0000";
+    private final static String ORANGE="#f76a05";
+    private final static String YELLOW="#f8e725";
+    private final static String GREEN="#36f00c";
+    private final static String BLUE="#092beb";
+    private final static String VIOLET="#b107f4";
+    private final static String BLACK="#000000";
+    private final static String TEAL="#06f4d1";
+    private final static String WHITE="#ffffff";
